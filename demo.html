@@ -6,8 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/textScroll.min.js"></script>
+    <script src="jquery-1.7.1.min.js"></script>
+    <script src="textScroll.js"></script>
+    <script src="snow.js"></script>
 </head>
 <style>
     body ,html{
@@ -19,9 +20,20 @@
         margin: 0;
         list-style: none;
         text-align: center;
+        color: black;
+        font-size: 12px;
+    }
+    .test{
+        width: 100px;
+        height: 100px;
+        background: red;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
     }
 </style>
 <body>
+    <div class="body"></div>
     <ul id="test">
         <li>这是第一行</li>
         <li>这是第二行</li>
@@ -29,10 +41,19 @@
         <li>这是第四行</li>
         <li>这是第五行</li>
         <li>这是第六行</li>
+
     </ul>
+<div class="test"></div>
 </body>
 <script>
-    $('#test').textScroll('100%',100,500)
+    // $('#test').textScroll('100%',700,500)
+    // $('.body').snow()
+    // $('li').on('click',function () {
+    //     $.eject('123')
+    // })
+    $(document).click(function (e) {
+        console.log($(e.target).getStyle());
+    })
     /*
       需要哪个元素进行滚动就给这个元素调用一下textScroll方法
       可以传入三个值 width,height,speed
