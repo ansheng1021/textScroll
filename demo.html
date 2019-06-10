@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/textScroll.js"></script>
+</head>
+<style>
+    body ,html{
+        padding: 0;
+        margin: 0;
+    }
+    ul,li{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+    }
+</style>
+<body>
+    <ul id="test">
+        <li>这是第一行</li>
+        <li>这是第二行</li>
+        <li>这是第三行</li>
+        <li>这是第四行</li>
+        <li>这是第五行</li>
+        <li>这是第六行</li>
+    </ul>
+</body>
+<script>
+    $('#test').textScroll('100%',100,500)
+    /*
+      需要哪个元素进行滚动就给这个元素调用一下textScroll方法
+      可以传入三个值 width,height,speed
+      width默认值：100%;
+      height默认值：100px
+      speed默认值：200
+    */
+</script>
+</html>
