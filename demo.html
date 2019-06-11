@@ -41,19 +41,75 @@
         <li>这是第四行</li>
         <li>这是第五行</li>
         <li>这是第六行</li>
-
     </ul>
 <div class="test"></div>
 </body>
 <script>
-    // $('#test').textScroll('100%',700,500)
-    // $('.body').snow()
-    // $('li').on('click',function () {
-    //     $.eject('123')
+    /***************文字滚动**************/
+    // $('#test').textScroll({
+    //     speed:200
     // })
-    $(document).click(function (e) {
-        console.log($(e.target).getStyle());
-    })
+
+    /***************下雪动效**************/
+    // $('.body').snow()
+
+    /*****************弹出框****************/
+    // $('li').on('click',function () {
+    //     $.eject('测试长度生生死是')
+    // })
+
+    /*****************获取当前点击的元素的样式****************/
+    // $(document).click(function (e) {
+    //     console.log($(e.target).getStyle());
+    // })
+
+
+    /************************设置cookie************************/
+    // function setCookie(name,value,hours,path,domain,secure){
+    //     var cdata = name + "=" + value;
+    //     if(hours){
+    //         var d = new Date();
+    //         d.setHours(d.getHours() + hours);
+    //         cdata += "; expires=" + d.toGMTString();
+    //     }
+    //     cdata +=path ? ("; path=" + path) : "" ;
+    //     cdata +=domain ? ("; domain=" + domain) : "" ;
+    //     cdata +=secure ? ("; secure=" + secure) : "" ;
+    //     document.cookie = cdata;
+    // }
+    //
+    /******************获取cookie******************/
+    // function getCookie(name){
+    //     var reg = eval("/(?:^|;\\s*)" + name + "=([^=]+)(?:;|$)/");
+    //     return reg.test(document.cookie) ? RegExp.$1 : "";
+    // }
+    //
+
+    /******************移除cookie******************/
+    // function removeCookie(name,path,domain){
+    //     this.setCookie(name,"",-1,path,domain);
+    // }
+
+    // function Window_Load(){
+    //     setCookie("name","111"); //临时cookie
+    //     setCookie("age","222",24 * 7);  //保存7天
+    //     setCookie("address","333",24,"/"); //保存1天,path为根目录
+    //
+    //     //设定cookie为安全的(secure=true),只能在HTTPS或与其他安全协议
+    //     //连接在一起的时候才被传输
+    //     setCookie("phone","444",24,"/",".",false);
+    //     alert(document.cookie);
+    //     alert(getCookie("age"));
+    //
+    //     //删除名称为"age"的cookie
+    //     removeCookie("age")
+    //     alert(document.cookie);
+    //     //删除名称为"address"的cookie,因为设置时设定的path,所以删除
+    //     //时也需要传入对应path
+    //     removeCookie("address","/")
+    //     alert(document.cookie);
+    // }
+
     /*
       需要哪个元素进行滚动就给这个元素调用一下textScroll方法
       可以传入三个值 width,height,speed
