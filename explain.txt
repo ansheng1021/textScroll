@@ -1,0 +1,19 @@
+//弹出框
+$.eject(content)
+
+//设置cookie
+$.setCookie(name value hour,path,domain,secure)
+
+//获取cookie
+$.getCookie(name)
+
+//移除cookie
+$.removeCookie(name)
+
+//文字滚动
+obj.textScroll({width,height,speed})
+
+//获取样式
+ $(document).click(function (e) {
+   $(e.target).getStyle();
+ })
